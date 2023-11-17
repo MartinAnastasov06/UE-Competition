@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+  rel="stylesheet"
+/>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // При submit на формата
+    $("form").submit(function (e) {
+      // Избери въведения текст
+      var searchText = $("#search-input").val().toLowerCase();
+
+      // Намери елемента със съответния текст
+      var targetElement = $("[id=result]").filter(function () {
+        return $(this).text().toLowerCase().includes(searchText);
+      });
+
+      // Провери дали елементът е намерен
+      if (targetElement.length > 0) {
+        // Пренасочи страницата към намерения елемент
+        $("html, body").animate(
+          {
+            scrollTop: targetElement.offset().top,
+          },
+          1000
+        );
+      }
+
+      // Избегни обичайното поведение на формата
+      e.preventDefault();
+    });
+  });
+</script>
+
+
+
+    
+    <link rel="stylesheet" href="about.css">
+    <!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+></script>
+
+    <title>UE Competition</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img
+          src="img/logo.png"
+          height="43"
+          alt="MDB Logo"
+          loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Начална страница</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">За нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Информация</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Контакти</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+     <form class="d-flex input-group w-auto">
+  <input
+    type="search"
+    class="form-control rounded"
+    placeholder="Search"
+    aria-label="Search"
+    aria-describedby="search-addon"
+    id="search-input"
+  />
+  <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+</form>
+
+
+    
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+
+<!-- Navigation -->
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="true" href="about.html">Основна информация</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="true" href="hobby.html">Хобита</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Моите хобита</h5>
+    <p class="card-text">
+      <center>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="img/web.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="result" class="card-title">Уеб програмиране</h5>
+        <p id="result" class="card-text">Занимавам се с разработка на уебсайтове от осми клас. Участвал съм в много олимпиади по информационни технологии, дори съм стигал до финален кръг.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="img/electronics.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="result" class="card-title">Електроника</h5>
+        <p id="result" class="card-text">Още в първи клас започнах да работя със светодиоди, електродвигатели, ключове и батерии. От четвърти клас се занимавам усилено със запояване.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="img/robotics.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="result" class="card-title">Роботика</h5>
+        <p id="result" class="card-text">Учил съм 5 нива на роботика в Robopartas. Беше много полезно за развитието на логическото ми мислене. През лятото на 8-ми клас имах и роботика в училище.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="img/music.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="result" class="card-title">Музика</h5>
+        <p id="result" class="card-text">Свиря на пиано от 8-годишен. През свободното си време слушам музика през цялото време и обичам да миксирам музика. Слушам предимно поп и R&B.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="img/hardware.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="result" class="card-title">Хардуер</h5>
+        <p id="result" class="card-text">Спомням си как гледах как баща ми почиства компютъра. И през годините разглобих и сглобих няколко компютъра.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="img/bike.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="result" class="card-title">Колоездене</h5>
+        <p id="result" class="card-text">В почивните си дни обичам да се отпускам с колело сред природата, наистина релаксиращ и забавен спорт.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</center>
+</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+
+
+
+
+<!-- About Me -->
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a target="_blank" href="https://www.facebook.com/martin.anastasow.7" class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a target="_blank" href="https://www.instagram.com/martin_anastasov06/" class="me-4 link-secondary">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a target="_blank" href="" class="me-4 link-secondary">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>Company name
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 id="result" class="text-uppercase fw-bold mb-4">Контакти</h6>
+          <p><i id="result" class="fas fa-home me-3 text-secondary"></i> Улица Студентска 1, 9010 Варна, България</p>
+          <p>
+            <i id="result" class="fas fa-envelope me-3 text-secondary"></i>
+            martin_anastasow@abv.bg
+          </p>
+          <p><i id="result" class="fas fa-phone me-3 text-secondary"></i> +359 87 8278842</p>
+          <p><i id="result" class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 18.11.2023 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Професионална гимназия по компютърно моделиране и компютърни системи "Акад. Благовест Сендов", гр. Варна</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</body>
+</html>
