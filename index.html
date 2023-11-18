@@ -16,35 +16,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
   rel="stylesheet"
 />
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  $(document).ready(function () {
-    // При submit на формата
-    $("form").submit(function (e) {
-      // Избери въведения текст
-      var searchText = $("#search-input").val().toLowerCase();
 
-      // Намери елемента със съответния текст
-      var targetElement = $("[id=result]").filter(function () {
-        return $(this).text().toLowerCase().includes(searchText);
-      });
-
-      // Провери дали елементът е намерен
-      if (targetElement.length > 0) {
-        // Пренасочи страницата към намерения елемент
-        $("html, body").animate(
-          {
-            scrollTop: targetElement.offset().top,
-          },
-          1000
-        );
-      }
-
-      // Избегни обичайното поведение на формата
-      e.preventDefault();
-    });
-  });
-</script>
 
 
 
@@ -109,18 +81,17 @@
     </div>
     <!-- Collapsible wrapper -->
      <form class="d-flex input-group w-auto">
-  <input
-    type="search"
-    class="form-control rounded"
-    placeholder="Search"
-    aria-label="Search"
-    aria-describedby="search-addon"
-    id="search-input"
-  />
-  <span class="input-group-text border-0" id="search-addon">
-    <i class="fas fa-search"></i>
-  </span>
-</form>
+      <input
+        type="search"
+        class="form-control rounded"
+        placeholder="Search"
+        aria-label="Search"
+        aria-describedby="search-addon"
+      />
+      <span class="input-group-text border-0" id="search-addon">
+        <i class="fas fa-search"></i>
+      </span>
+    </form>
 
 
     
@@ -307,7 +278,7 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
     © 18.11.2023 Copyright:
-    <a id="result" class="text-reset fw-bold" href="https://mdbootstrap.com/">Професионална гимназия по компютърно моделиране и компютърни системи "Акад. Благовест Сендов", гр. Варна</a>
+    <a id="result" class="text-reset fw-bold" href="https://mdbootstrap.com/">Мартин Анастасов - Професионална гимназия по компютърно моделиране и компютърни системи "Акад. Благовест Сендов", гр. Варна</a>
   </div>
   <!-- Copyright -->
 </footer>
