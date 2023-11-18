@@ -1,12 +1,12 @@
 .navbar{
-	background-color: #669999;
+	background-color: #000000;
 }
 .nav-item{
 	font-size: 20px;
-	font-color: black;
+	font-color: white;
 }	
 .text-center{
-	background-color: #669999;
+	background-color: black;
 }
 .text-muted{
 	color: black !important;
@@ -19,4 +19,16 @@
 }
 .text-secondary{
 	color: black !important;
+}
+.nav-link{
+	color: #FFFFFF;
+}
+.nav-link:hover{
+	color: red;
+}
+p, h6, i, a{
+	color: white !important;
+}
+.text-reset{
+	color: white !important;
 }
